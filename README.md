@@ -17,14 +17,17 @@ In `houseprice_prediction.ipynb`, the dataset is explored and cleaned:
 - **Handling missing values**
 - **Checking the distribution of numerical features**
 - **Visualizing correlations between variables using heatmaps**
-- **Encoding categorical features** (e.g., location) using `LabelEncoder`
+- **Correlation analysis**: Identifying the strongest predictors of price
+- **Skewness analysis**: Transforming features to improve model stability
+- **Boxplots**: Identifying and handling outliers
+- **Log transformation** applied to reduce skewness in price and area
 
 ## Feature Engineering
 To improve the predictive power of the model, the following new features are created:
 - **`price_per_sqm`**: Price per square meter
 - **`room_area_ratio`**: Ratio of room count to total area
 - **`floor_ratio`**: Current floor divided by maximum floor
-- **Log transformation** applied to reduce skewness in price and area
+- **Encoding categorical features** (e.g., location) using `LabelEncoder`
 
 ## Model Building
 A `RandomForestRegressor` is trained to predict house prices. The pipeline includes:
@@ -34,20 +37,15 @@ A `RandomForestRegressor` is trained to predict house prices. The pipeline inclu
 4. **Model evaluation** using metrics such as `r2_score` and `mean_squared_error`
 
 ## Results
-The model is evaluated based on:
-- **Correlation analysis**: Identifying the strongest predictors of price
-- **Skewness analysis**: Transforming features to improve model stability
-- **Boxplots**: Identifying and handling outliers
+Linear Regression:
+- Mean Absolute Error: 9.905989942241036e-16
+- Mean Squared Error: 1.6672681834671116e-30
+- R-squared: 1.0
 
-## Future Improvements
-- Expanding the dataset with more listings
-- Experimenting with other regression models (e.g., XGBoost, LightGBM)
-- Incorporating additional features such as neighborhood crime rates and infrastructure quality
+Random Forest Regressor:
+-Mean Absolute Error: 0.0018570826934125246
+-Mean Squared Error: 0.00016093607081635268
+-R-squared: 0.9986651059714101
 
-
-## Usage
-1. Run `scrapy.py` to scrape house listings.
-2. Process and analyze the dataset in `houseprice_prediction.ipynb`.
-3. Train the model and evaluate its performance.
 
 

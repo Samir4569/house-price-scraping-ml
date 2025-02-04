@@ -43,9 +43,9 @@ Linear Regression:
 - R-squared: 1.0
 
 Random Forest Regressor:
--Mean Absolute Error: 0.0018570826934125246
--Mean Squared Error: 0.00016093607081635268
--R-squared: 0.9986651059714101
+- Mean Absolute Error: 0.0018570826934125246
+- Mean Squared Error: 0.00016093607081635268
+- R-squared: 0.9986651059714101
 
 
 

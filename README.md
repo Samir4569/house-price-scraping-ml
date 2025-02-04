@@ -30,11 +30,10 @@ To improve the predictive power of the model, the following new features are cre
 - **Encoding categorical features** (e.g., location) using `LabelEncoder`
 
 ## Model Building
-A `RandomForestRegressor` is trained to predict house prices. The pipeline includes:
+`RandomForestRegressor` and ``LinearRegression`` is trained to predict house prices. The pipeline includes:
 1. **Splitting the data** into training and test sets
 2. **Scaling numerical features** using `StandardScaler`
-3. **Hyperparameter tuning** using `RandomizedSearchCV`
-4. **Model evaluation** using metrics such as `r2_score` and `mean_squared_error`
+3. **Model evaluation** using metrics such as `r2_score`, `mean_squared_error`, `mean_absolute_error`
 
 ## Results
 Linear Regression:
